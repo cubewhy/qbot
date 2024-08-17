@@ -34,7 +34,7 @@ def on_after_message(bot: Bot, event: Event):
 
 
 bot = Bot(
-    # faked_version="3.9.10.19", # 解除微信低版本限制
+    faked_version="3.9.10.19", # 解除微信低版本限制
     on_login=on_login,
     on_start=on_start,
     on_stop=on_stop,
