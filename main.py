@@ -48,6 +48,7 @@ def cash(amount):
 
 def on_login(bot: Bot, event: Event):
     print("登录成功之后会触发这个函数")
+    scheduler.start()
 
 
 def on_start(bot: Bot):
@@ -90,6 +91,5 @@ def on_message(bot: Bot, event: Event):
 
 scheduler = BackgroundScheduler()
 scheduler.add_job(heartbeat, 'interval', minutes=5)
-scheduler.start()
 
 bot.run()
